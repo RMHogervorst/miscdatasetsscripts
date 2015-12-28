@@ -16,7 +16,7 @@ if (is.data.frame(df) == TRUE){
         info$unique<-lapply(df, function(x) length(unique(x)))
         info<-cbind(info, min=apply (df, 2, function(x) which(x == min(x, na.rm = T))[1]))
         info<-cbind(info, max=apply (df, 2, function(x) which(x == max(x, na.rm = T))[1]))
-        info<-cbind(info, mode= apply(test,2, function(x) {
+        info<-cbind(info, mode= apply(df,2, function(x) {
                 ux <- unique(x)
                 ux[which.max(tabulate(match(x, ux)))]
         }) )

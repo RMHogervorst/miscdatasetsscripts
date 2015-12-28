@@ -16,6 +16,7 @@ example_raw<-function(n_rows = 50, seed) {
         let3<-sample(state.name, n_rows, replace = T)
         bla<- round(rnorm(n_rows, 27, 6), 2)
         
+        
         # replacing random parts with NAs or weird values. 
         #thanks to:http://paleocave.sciencesortof.com/2014/07/insert-random-nas-in-a-vector-in-r/
         integ2[integ2 == 4] <- 99
